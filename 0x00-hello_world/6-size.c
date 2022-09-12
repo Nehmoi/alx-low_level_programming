@@ -4,7 +4,7 @@
  * Description: A C program that prints the size of various types
  * Return: Always (0) success
  */
-int main (void)
+int main(void)
 {
 	int i;
 	char c;
