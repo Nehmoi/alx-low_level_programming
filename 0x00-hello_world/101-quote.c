@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
- * main - Entry point
+ * main - print quote
  * Description: A C program that prints without any NAME function
- * Return: Always (0) success
+ * Return: Always 1 (success)
  */
 int main(void)
 {
