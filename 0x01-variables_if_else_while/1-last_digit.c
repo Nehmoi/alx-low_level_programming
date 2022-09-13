@@ -7,17 +7,15 @@
  * Description: print the last digit of the number stored in the variable n
  *
  * Return: Always 0 (success)
- */
-
+*/
 int main(void)
 {
 	int n;
 	int last_N;
-	
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* my code */
-	
 	last_N = n % 10;   /*this gets the last number*/
 	if (last_N > 5)
 	{
