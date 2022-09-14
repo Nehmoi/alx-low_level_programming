@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _abs - returns the absolute value of a number given to it
  * @value: a given value
@@ -13,6 +14,6 @@ int _abs(int value)
 	}
 	else
 	{
-		return  (value);
+		return (value);
 	}
 }
