@@ -1,6 +1,7 @@
 #include "main.h"
+
 /**
- * add - add two numbers togethsr
+ * add - add two numbers together
  * @a: one argument
  * @b: another argument to be added
  * Return: returns 0 if successful
