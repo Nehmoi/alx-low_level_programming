@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
- * print_sign - return the supposed sign of an interger
- * @value: the value to be evaluated
- * Return: return 1 if positive 0 if value = 0 and -1 if negative
+ * main - Entry point
+ * Desciption: a program that prints sign of a number
+ * Return: Always (0) success
  */
 
 int print_sign(int value)
