@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
- * print_last_digit - prints the last digit of the given vakue
+ * print_last_digit - prints the last digit of the given value
  * @value: the given value
- * Return: returns 0 if succcessful 1 if otherwise
+ * Return: returns 0 if successful 1 if otherwise
  */
 
 int print_last_digit(int value)
