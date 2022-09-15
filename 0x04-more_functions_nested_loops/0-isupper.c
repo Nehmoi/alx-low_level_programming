@@ -11,16 +11,12 @@
 
 int _isupper(int c)
 {
-	char c;
-
-	if (c = 'A')
+	if ((c >= 'A') && (c <= 'Z'))
 	{
-		printf("%c: %d\n", c, _isupper(c));
-		return (1);
+			return (1);
 	}
-	if (c = 'a')
+	else
 	{
-		printf("%c: %d\n", c, _isupper(c));
-		return (0);
+			return (0);
 	}
 }
