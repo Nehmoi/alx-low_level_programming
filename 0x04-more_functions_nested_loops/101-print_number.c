@@ -1,10 +1,10 @@
-#include "main.h"
+#include"main.h"
 
 /**
  * print_number - Prints an integer.
  *
  * @n: The integer to be printed.
- */
+*/
 
 void print_number(int n)
 {
@@ -16,7 +16,7 @@ void print_number(int n)
 		_putchar('-');
 		num = -num;
 	}
-	
+
 	/*print the first few digits*/
 	if ((num / 10) > 0)
 		print_number(num / 10);
