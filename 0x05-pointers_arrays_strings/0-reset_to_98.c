@@ -10,14 +10,12 @@
 
 int main(void)
 {
-	int var = 98;
-	int *ip;
+	int n;
 
-	ip = &var;
-	printf("Address of var variable: %x\n", &var);
-
-	printf("Address stored in ip variable: %x\n", ip);
-	printf("Value of *ip variable: %d\n". *ip);
+	n = 402;
+	printf("n=%d\n", n);
+	reset_to_98(&n);
+	printf("n=%d\n", n);
 
 	return (0);
 }
