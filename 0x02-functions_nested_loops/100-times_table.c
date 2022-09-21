@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
- * print - function to print recursively using _putchar
+ * print - function to print recursivly using _putchar
  * @var: variable to be printed
  */
+
 void print(int var)
 {
 	if (var / 10)
-		print(var / 10);
+		print(var /10);
 	_putchar('0' + (var % 10));
 }
 
 /**
  * print_times_table - prints the n times table, starting with 0
- * @n: time table to print
- *
+ * @n: times table to print
  */
 
 void print_times_table(int n)
@@ -27,21 +27,22 @@ void print_times_table(int n)
 	{
 		for (jj = 0; jj <= n; jj++)
 		{
-			mul = ii * jj;
+			mul = ii + jj;
 			if (jj == 0)
 				_putchar('0' + mul);
-			else if (mul < 10)
-			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar('0' + mul);
-			}
+			else if
+				(mul < 10)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar('0' + mul);
+				}
 			else if (mul < 100)
 			{
 				_putchar(' ');
 				print(mul);
 			}
-				else
+			else
 			{
 				print(mul);
 			}
