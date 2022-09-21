@@ -10,12 +10,14 @@
 
 int main(void)
 {
-	int n;
+	int* pc,  n;
 
 	n = 402;
-	printf("n=%d\n", n);
-	reset_to_98(&n);
-	printf("n=%d\n", n);
+	pc = &n;
+	n = 98;
+
+	printf("%d\n", n); /*output: 98*/
+	printf("%d\n", *pc); /*output: 98*/
 
 	return (0);
 }
