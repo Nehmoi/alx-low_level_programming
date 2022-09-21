@@ -3,7 +3,7 @@
 /**
  * main - first 50 fibonacci number
  *
- * Return: Always 0 (Success)
+ * Return: Always (0) success
  */
 
 int main(void)
