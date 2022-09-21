@@ -16,7 +16,7 @@ int main(void)
 		result = n1 + n2;
 		n1 = n2;
 		n2 = result;
-		printf("%lu" , result);
+		printf("%lu", result);
 		if (ii != nLast - 1)
 			printf(", ");
 	}
