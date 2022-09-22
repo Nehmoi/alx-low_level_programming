@@ -6,13 +6,7 @@
  * updates the value it points to to 98.
  */
 
-int main(void)
+void reset_to_98(int *n)
 {
-	int n = 402;
-	int *ptr = &n;
-	*ptr = 98;
-
-	printf("%d", *ptr);
-
-	return (0);
+	*n = 98;
 }
