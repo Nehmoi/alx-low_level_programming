@@ -2,14 +2,15 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Description: reset_to_98 - takes an integer pointer and updates
- * the value to to 98
- * @n: an integer pointer that stores the address argument
- * Return: Always (0) success.
+ * reset_to_98 - takes an integer as parameter and
+ * updates the value it points to to 98.
  */
 
-void reset_to_98(int *n)
+int main(void)
 {
-	*n = 98;
+	int n = 402;
+	int *ptr = &n;
+	*ptr = 98;
+
+	printf("%d", *ptr);
 }
