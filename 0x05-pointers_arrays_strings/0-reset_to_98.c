@@ -13,4 +13,6 @@ int main(void)
 	*ptr = 98;
 
 	printf("%d", *ptr);
+
+	return (0);
 }
