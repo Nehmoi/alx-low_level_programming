@@ -1,47 +1,46 @@
-#include<stdio.h>
+#include "main.h"
 
 /**
- * remplace13 - a function ...
- * @b: char
+ * rot13 - Encodes a string using rot13.
+ * @str: The string to be encoded.
  *
- * Return: char
+ * Return: A pointer to the encoded string.
  */
-
-char remplace13(char b)
+char *rot13(char *str)
 {
-	/*ASCII 65 is A and 90 is Z*/
-	if ((b > 64) && (b < 91))
+	int indx1 = 0, indx2;
+	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F',
+			     'G', 'H', 'I', 'J', 'K', 'L',
+			     'M', 'N', 'O', 'P', 'Q', 'R',
+			     'S', 'T', 'U', 'V', 'W', 'X',
+			     'Y', 'Z', 'a', 'b', 'c', 'd',
+			     'e', 'f', 'g', 'h', 'i', 'j',
+			     'k', 'l', 'm', 'n', 'o', 'p',
+			     'q', 'r', 's', 't', 'u', 'v',
+			     'w', 'x', 'y', 'z'};
+	char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S',
+			     'T', 'U', 'V', 'W', 'X', 'Y',
+			     'Z', 'A', 'B', 'C', 'D', 'E',
+			     'F', 'G', 'H', 'I', 'J', 'K',
+			     'L', 'M', 'n', 'o', 'p', 'q',
+			     'r', 's', 't', 'u', 'v', 'w',
+			     'x', 'y', 'z', 'a', 'b', 'c',
+			     'd', 'e', 'f', 'g', 'h', 'i',
+			     'j', 'k', 'l', 'm'};
+
+	while (str[indx1])
 	{
-		b = ((b - 65 + 13) % 26) + 65;
-	}
+		for (indx2 = 0; indx2 < 52; indx2++)
+		{
+			if (str[indx1] == alphabet[indx2])
+			{
+				str[indx1] = rot13key[indx2];
+				break;
+			}
+		}
 
-	/*ASCII 97 is a and 122 is z*/
-	if ((b > 96) && (b < 123))
-	{
-		b = ((b - 97 + 13) % 26) + 97;
-	}
+		indx1++;
 
-	return (b);
-}
-
-/**
- * rot13 - a function ...
- * @str: the chaine of caractere
- *
- * Return: str
- */
-
-char	*rot13(char *str)
-{
-	int i = 0;
-	/*char alp[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";*/
-	/*char cde[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";*/
-
-	while (str[i])
-	{
-		str[i] = remplace13(str[i]);
-		i++;
 	}
 	return (str);
 }
-
