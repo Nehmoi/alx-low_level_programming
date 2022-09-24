@@ -10,9 +10,8 @@
  * Return: Always (0) success
  */
 
-int main()
+char *_strcat(char *dest, char *src)
 {
-	char dest[], src[];
 
 	strcat(dest, src);
 	return (0);
