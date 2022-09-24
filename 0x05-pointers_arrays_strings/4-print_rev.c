@@ -1,23 +1,24 @@
 #include "main.h"
+#include <string.h>
 
 /**
- * print_rev - prints a string in reverse,
- * followed by a new line
- * @s: input string
- * Return: no return.
+ * print_rev - updates the value of variable n using pointers
+ * @s: int variable to be swapped
+ * Return: Always 0
  */
 
 void print_rev(char *s)
 {
-	int count = 0;
+	char *start = s;
 
-	while (count >= 0)
+	while (*start != '\0')
 	{
-		if (s[count] == '\0')
-			break;
-		count++;
+		start++;
 	}
-	for (count--; count >= 0; count--)
-		_putchar(s[count]);
+	while (start != s)
+	{
+		start--;
+		_putchar(*start);
+	}
 	_putchar('\n');
 }
