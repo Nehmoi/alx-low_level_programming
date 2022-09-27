@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "main.h"
 
 /**
  * simple_print_buffer - prints buffer in hexa
@@ -17,16 +18,16 @@ void simple_print_buffer(char *buffer, unsigned int size)
         {
                 if (i % 10)
                 {
-                        printf(" ");
+                        _putchar(" ");
                 }
                 if (!(i % 10) && i)
                 {
-                        printf("\n");
+                        _putchar("\n");
                 }
-                printf("0x%02x", buffer[i]);
+                _putchar("0x%02x", buffer[i]);
                 i++;
         }
-        printf("\n");
+        _putchar("\n");
 }
 
 /**
