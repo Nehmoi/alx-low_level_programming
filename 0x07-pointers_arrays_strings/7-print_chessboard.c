@@ -1,26 +1,22 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
-* print_chessboard- fills memory with a constant byte
-* @a: 2D array of array
-* Return: void
-*/
-
+ * print_chessboard - prints the chessboard
+ * @a: input pointer.
+ * Return: no return.
+ */
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
+	unsigned int i, m = 0;
 
-	i = 0;
-	while (i < 8)
+	for (i = 0; i < 64; i++)
 	{
-		j = 0;
-		while (j < 8)
+		if (i % 8 == 0 && i != 0)
 		{
-			_putchar(a[i][j]);
-			j++;
+			m = i;
+			_putchar('\n');
 		}
-		_putchar('\n');
-		i++;
+		_putchar(a[i / 8][i - m]);
 	}
+	_putchar('\n');
 }
