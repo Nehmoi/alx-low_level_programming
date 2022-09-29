@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -9,15 +8,11 @@
 
 void _print_rev_recursion(char *s)
 {
-	char *start = s;
-
-	*start != '\0';
-	start++;
-
-	start != s, start--;
-}
-int main(void)
-{
-    _print_rev_recursion("\nColton Walker");
-    return (0);
+	if (*s)
+	{
+		_putchar(*s);
+		_print_rev_recursion(s + 1);
+	}
+	else
+		_putchar('\n');
 }
