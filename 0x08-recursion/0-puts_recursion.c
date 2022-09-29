@@ -15,6 +15,6 @@ void _puts_recursion(char *str)
 }
 int main(void)
 {
-	_puts_recursion("Puts with recursion");
+	_puts_recursion("_putchar *s");
 	return (0);
 }
