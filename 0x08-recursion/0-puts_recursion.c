@@ -6,15 +6,16 @@
  * @str: the string to be printed.
  */
 
-void _puts_recursion(char *str)
+void _puts_recursion(char *s)
 {
-	
-	_putchar(*str++);
-
+	if (*s > 0)
+	{
+		_puts_recursion(*s + 1);
+		_putchar(*s);
+	}
 	_putchar('\n');
-}
-int main(void)
-{
-	_puts_recursion("_putchar *s");
-	return (0);
+	else
+	{
+		return (0);
+	}
 }
