@@ -6,7 +6,7 @@
  * @str: the string to be printed.
  */
 
-void _puts_recursion(char *s)
+void _puts_recursion(char *str)
 {
 	
 	_putchar(*str++);
