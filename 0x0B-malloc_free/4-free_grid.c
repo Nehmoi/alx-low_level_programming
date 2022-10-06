@@ -1,30 +1,20 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * print_grid - prints a grid of integers
- * @grid: the address of the two dimensional grid
- * @width: width of the grid
- * @height: height of the grid
+ * free_grid - a function that frees a 2 dimentional grid.
+ * @grid: multidimensional array of integers.
+ * @height: grid height.
  *
- * Return: Nothing.
+ * Return: no return
  */
-void print_grid(int **grid, int width, int height)
-{
-    int w;
-    int h;
 
-    h = 0;
-    while (h < height)
-    {
-        w = 0;
-        while (w < width)
-        {
-            printf("%d ", grid[h][w]);
-            w++;
-        }
-        printf("\n");
-        h++;
-    }   
+void free_grid(int **grid, int height)
+{
+	if (grid != NULL && height != 0)
+	{
+		for (; height >= 0; height--)
+			free(grid[height]);
+		free(grid);
+	}
 }
