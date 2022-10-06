@@ -1,30 +1,32 @@
 #include <stdio.h>
-#include "main.h"
-#include <ctype.h>
+#include <stdlib.h>
 
 /**
- * main - a program thats add positive numbers followed by a new line
- * @argc: agrument count
- * @agrv: agrument vector passed
- * Return: Always (0) success
- */
+*main - this adds positive numbers
+*@argc: d number of arguments
+*@argv: d array of arguments
+*Return: 0 on success, 1 on failure
+*/
 
 int main(int argc, char *argv[])
 {
-	int i, j, add = 0;
+	int i, j, sum = 0;
 
 	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (!isdigit(argv[i][j]))
+			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		add += atoi(argv[i]);
+
+		sum += atoi(argv[i]);
 	}
-	printf("%d\n", add);
+
+	printf("%d\n", sum);
+
 	return (0);
 }
