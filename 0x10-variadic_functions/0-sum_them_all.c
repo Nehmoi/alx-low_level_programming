@@ -24,9 +24,9 @@ int sum_them_all(const unsigned int n, ...)
 
 	/* loop through all arguments stored in the va_list*/
 
-	for(i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
-		sum = sum + va_arg(sumall, int);
+		sum += va_arg(sumall, int);
 	}
 
 	va_end(sumall);
