@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * size_t - a function that prints the elements of a list
+ * print_listint - a function that prints the elements of a list
  * @h: head of the list
  *
  * Return: the number of nodes
@@ -18,5 +18,5 @@ size_t print_listint(const listint_t *h)
 		count += 1;
 		cursor = cursor->next;
 	}
-	return(0);
+	return (0);
 }
