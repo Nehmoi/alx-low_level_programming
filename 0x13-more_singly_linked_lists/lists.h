@@ -1,6 +1,9 @@
 #ifndef LIST
 #define LIST
 
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 /**
  * struct listint_s - singly linked list
  * @n: integer

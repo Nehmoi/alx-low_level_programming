@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "main.h"
+#include "lists.h"
 
 /**
  * size_t - a function that prints the elements of a list
