@@ -1,5 +1,6 @@
-#ifdef DOG_H
+#ifndef DOG_H
 #define DOG_H
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -31,4 +32,4 @@ void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
 void free_dog(dog_t *d);
 
-#endif
+#endif /*DOG_H*/
