@@ -6,9 +6,9 @@
 
 /**
  * struct dog - a data type containing info of a dog
- * @a: first member
- * @b: second member
- * @c: third member
+ * @name: the name of the dog
+ * @age: the age of the dog
+ * @owner: the owner of the dog
  *
  */
 struct dog
