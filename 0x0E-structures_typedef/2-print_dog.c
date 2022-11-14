@@ -1,5 +1,10 @@
 #include "dog.h"
 
+/**
+ * print_dog - a function that prints struct dog
+ * @d: variable of struct dog
+ */
+
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
