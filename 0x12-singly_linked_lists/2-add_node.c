@@ -1,28 +1,31 @@
 #include "lists.h"
+#include <string.h>
 
 /**
- * add_note - a function that adds a new node at the beginning of a list
- * @head: head of linked list
- * @str: sring to the linked list
- * Return: the address of the new element, or NULL if it failed
+ * add_node - adds a new node at the beginning
+ * of a list_t list.
+ * @head: head of the linked list.
+ * @str: string to store in the list.
+ * Return: address of the head.
  */
 
-list_t *add_node(list_t **head, const char *str);
+list_t *add_node(list_t **head, const char *str)
 {
-	list_t *first;
-	unsigned int len = 0;
+	list_t *new;
+	size_t nchar;
 
-	while (str[len])
-		len++;
-
-	first = malloc(sizeof(list_t));
-	if (!new)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 		return (NULL);
 
-	first->str = strdup(str);
-	first->len = len;
-	first->next = (*head);
-	(*head) = first;
+	new->str = strdup(str);
+
+	for (nchar = 0; str[nchar]; nchar++)
+		;
+
+	new->len = nchar;
+	new->next = *head;
+	*head = new;
 
 	return (*head);
 }
