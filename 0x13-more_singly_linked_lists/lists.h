@@ -1,5 +1,5 @@
-#ifndef LIST
-#define LIST
+#ifndef LISTS_H
+#define LISTS_H
 
 #include <stdio.h>
 #include <string.h>
@@ -9,7 +9,7 @@
  * @n: integer
  * @next: points to the next node
  *
- * Description: singly linked list noe structure
+ * Description: singly linked list node structure
  *
  */
 
@@ -31,4 +31,4 @@ int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
-#endif /*LIST*/
+#endif /*LISTS_H*/
