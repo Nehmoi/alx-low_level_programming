@@ -10,14 +10,12 @@
 
 #include <unistd.h>
 
-/**
- * main.h file is guard included
- * All headers files are included here
- * prototypes for here file is added
- */
+/* protypes for here file is added*/
+
 int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
+int _strlen(char *str);
 
 #endif /*MAIN_H*/
